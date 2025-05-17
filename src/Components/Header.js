@@ -10,9 +10,15 @@ const Header = () => {
             <li className="relative hover:text-[#e1b869] after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 hover:after:w-full after:h-1 after:bg-[#e1b869] after:transition-all after:duration-300">
               Home
             </li>
-            <li>Shop</li>
-            <li>About</li>
-            <li>Contact Us</li>
+            <li className="relative hover:text-[#e1b869] after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 hover:after:w-full after:h-1 after:bg-[#e1b869] after:transition-all after:duration-300">
+              Shop
+            </li>
+            <li className="relative hover:text-[#e1b869] after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 hover:after:w-full after:h-1 after:bg-[#e1b869] after:transition-all after:duration-300">
+              About
+            </li>
+            <li className="relative hover:text-[#e1b869] after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 hover:after:w-full after:h-1 after:bg-[#e1b869] after:transition-all after:duration-300">
+              Contact Us
+            </li>
           </ul>
         </div>
       </div>
