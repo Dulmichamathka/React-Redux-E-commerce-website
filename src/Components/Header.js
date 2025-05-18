@@ -1,24 +1,64 @@
 import React from "react";
+import { BsAlexa } from "react-icons/bs";
+import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
     <div>
-      <div className=" flex justify-between items-center   w-full px-32 py-4 bg-[#ffe6e6]">
-        <h1 className="text-3xl font-bold text-[#e1b869]">FashionsBug</h1>
+      <div className="flex items-center justify-between w-full px-32 py-4 bg-white shadow-md">
+        <h1 className="text-3xl flex font-bold text-[#e1b869]">
+          Cartic <BsAlexa />
+        </h1>
         <div>
           <ul className="flex gap-10 font-bold cursor-pointer ">
-            <li className="relative hover:text-[#e1b869] after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 hover:after:w-full after:h-1 after:bg-[#e1b869] after:transition-all after:duration-300">
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                `relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 hover:after:w-full after:h-1 after:transition-all after:duration-300 ${
+                  isActive
+                    ? "text-[#e1b869] after:bg-[#e1b869] after:w-full"
+                    : "after:bg-[#e1b869]"
+                }`
+              }
+            >
               Home
-            </li>
-            <li className="relative hover:text-[#e1b869] after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 hover:after:w-full after:h-1 after:bg-[#e1b869] after:transition-all after:duration-300">
+            </NavLink>
+            <NavLink
+              to="/allproducts"
+              className={({ isActive }) =>
+                `relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 hover:after:w-full after:h-1 after:transition-all after:duration-300 ${
+                  isActive
+                    ? "text-[#e1b869] after:bg-[#e1b869] after:w-full"
+                    : "after:bg-[#e1b869]"
+                }`
+              }
+            >
               Shop
-            </li>
-            <li className="relative hover:text-[#e1b869] after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 hover:after:w-full after:h-1 after:bg-[#e1b869] after:transition-all after:duration-300">
+            </NavLink>
+            <NavLink
+              to="/about"
+              className={({ isActive }) =>
+                `relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 hover:after:w-full after:h-1 after:transition-all after:duration-300 ${
+                  isActive
+                    ? "text-[#e1b869] after:bg-[#e1b869] after:w-full"
+                    : "after:bg-[#e1b869]"
+                }`
+              }
+            >
               About
-            </li>
-            <li className="relative hover:text-[#e1b869] after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 hover:after:w-full after:h-1 after:bg-[#e1b869] after:transition-all after:duration-300">
+            </NavLink>
+            <NavLink
+              to="/contact"
+              className={({ isActive }) =>
+                `relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 hover:after:w-full after:h-1 after:transition-all after:duration-300 ${
+                  isActive
+                    ? "text-[#e1b869] after:bg-[#e1b869] after:w-full"
+                    : "after:bg-[#e1b869]"
+                }`
+              }
+            >
               Contact Us
-            </li>
+            </NavLink>
           </ul>
         </div>
       </div>

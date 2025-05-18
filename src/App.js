@@ -3,6 +3,7 @@ import Header from "./Components/Header";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ProductListing from "./Components/ProductListing";
 import ProductDetails from "./Components/ProductDetails";
+import HomePage from "./Components/HomePage";
 
 function App() {
   return (
@@ -10,7 +11,8 @@ function App() {
       <Router>
         <Header />
         <Routes>
-          <Route path="/" element={<ProductListing />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/allproducts" element={<ProductListing />} />
           <Route path="/product/:productId" element={<ProductDetails />} />
           <Route>404 Not Found</Route>
         </Routes>
