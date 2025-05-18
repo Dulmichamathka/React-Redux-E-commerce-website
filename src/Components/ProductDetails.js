@@ -2,7 +2,10 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
-import { selectedProduct } from "../store/Actions/productActions";
+import {
+  selectedProduct,
+  removeSelectedProduct,
+} from "../store/Actions/productActions";
 import { FaCartArrowDown } from "react-icons/fa";
 import { FaTag } from "react-icons/fa6";
 
@@ -30,6 +33,9 @@ const ProductDetails = () => {
   //useeffect
   useEffect(() => {
     if (productId && productId !== "") fetchProductsDetails();
+    return () => {
+      dispatch(removeSelectedProduct());
+    };
   }, [productId]);
 
   //return ui
